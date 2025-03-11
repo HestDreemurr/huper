@@ -1,0 +1,16 @@
+{
+  "name": "huper",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch ."
+  },
+  "keywords": [],
+  "author": "Hest",
+  "license": "MIT",
+  "description": "API para armazenar imagens",
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
