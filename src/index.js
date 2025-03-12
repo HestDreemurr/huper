@@ -10,11 +10,15 @@ app.post("/image/upload", upload.single("image"), (req, res) => {
 })
 
 app.get("/image/get/:code", (req, res) => {
-  const imageCode = req.params.code
-  
-  const imagePath = path.join(__dirname, `../uploads/${imageCode}`)
-  
-  return res.sendFile(imagePath)
+  try {
+    const imageCode = req.params.code
+    
+    const imagePath = path.join(__dirname, `../uploads/${imageCode}`)
+    
+    return res.sendFile(imagePath)
+  } catch {
+    return res.status(404).json({ message: "image_not_found" })
+  }
 })
 
 
