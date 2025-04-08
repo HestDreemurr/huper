@@ -6,6 +6,7 @@ const upload = require("./lib/multer.js")
 const app = express()
 
 app.post("/image/upload", upload.single("image"), (req, res) => {
+  console.log(req.body.image)
   return res.json({ imageCode: req.file.filename })
 })
 
