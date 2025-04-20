@@ -1,7 +1,7 @@
 {
   "name": "huper",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
     "dev": "node --watch ."
   },
@@ -10,7 +10,9 @@
   "license": "MIT",
   "description": "API para armazenar imagens",
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.5.0",
     "express": "^4.21.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.2"
   }
 }
